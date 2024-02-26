@@ -30,3 +30,7 @@ Al click delle frecce, oltre al cambio di immagine attiva, gestire il cambio di 
 - Video: [video position]()
 
 ## SVOLGIMENTO
+1. creazione array con i percorsi delle immagini da inserire
+2. creazione ciclo FOR per insere le immagini
+3. alle immagini inserisco la classe HIDE 
+4. tolgo la classe HIDE al 1 elemento
