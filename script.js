@@ -29,7 +29,18 @@ btnUp.addEventListener ('click', function() {
   // all'incrementare del click del bntUp, la classe HIDE la rimuovo
   countersImg++;
   console.log(countersImg)
+
+
+  // creo la condizione che SE il contatore dall'immagine 4 deve ritornare all'img 0
+  if (countersImg >= immagini.length) {
+    countersImg = 0;
+    console.log(countersImg)
+  }
+
+
+   // all'incrementare del click del bntUp, la classe HIDE la rimuovo
   imgCollection[countersImg].classList.remove('hide');
+
 })
 
 // creo la constante del btn down (chevron)
@@ -41,5 +52,15 @@ btnDown.addEventListener ('click', function() {
   // all'incrementare del click del bntUp, la classe HIDE la rimuovo
   countersImg--;
   console.log(countersImg)
+
+  // creo la condizione che SE il contatore dall'immagine 0 deve ritornare all'img 4
+  if (countersImg < 0) {
+    countersImg = immagini.length-1;
+  }
+
+
+  // all'incrementare del click del bntUp, la classe HIDE la rimuovo
   imgCollection[countersImg].classList.remove('hide');
+
+
 })
