@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: blue;
+  margin: 0 auto;
+}
+
+.box {
+  height: 50%;
+  width: 60%;
+  background-color: aqua;
+}
+
+.image-big {
+  height: 100%;
+}
+
+.image-big img {
+  object-fit: cover;
+  /* manca ridimensionamento img */
+  height: 100%;
+  width: 100%;
+}
