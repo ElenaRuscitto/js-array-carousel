@@ -34,5 +34,6 @@ Al click delle frecce, oltre al cambio di immagine attiva, gestire il cambio di 
 2. creazione ciclo FOR per insere le immagini
 3. alle immagini inserisco la classe HIDE 
 4. tolgo la classe HIDE al 1 elemento
-5. all'evento di cliccare il btnUp cambia l'immagine attivando e quindi incrementando/decrementando il contatore
- - levare il btnUp alla prima immagine, ma lasciarlo nelle altre
+5. all'evento di cliccare il btnUp cambia l'immagine attivando e quindi incrementando il contatore
+6. all'evento di cliccare il btnDown cambia l'immagine attivando e quindi decrementando il contatore
+
