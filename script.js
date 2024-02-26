@@ -18,3 +18,28 @@ const imgCollection = document.getElementsByClassName('img');
 let countersImg = 0;
 // rimuovo HIDE dal primo elemento
 imgCollection [0].classList.remove('hide');
+
+// creo la constante del btn up (chevron)
+const btnUp = document.querySelector('.up');
+
+btnUp.addEventListener ('click', function() {
+  // al click del bntUp, la classe HIDE la metto al' immagine corrente
+  imgCollection[countersImg].classList.add('hide');
+
+  // all'incrementare del click del bntUp, la classe HIDE la rimuovo
+  countersImg++;
+  console.log(countersImg)
+  imgCollection[countersImg].classList.remove('hide');
+})
+
+// creo la constante del btn down (chevron)
+const btnDown = document.querySelector('.down');
+btnDown.addEventListener ('click', function() {
+  // al click del bntUp, la classe HIDE la metto al' immagine corrente
+  imgCollection[countersImg].classList.add('hide');
+
+  // all'incrementare del click del bntUp, la classe HIDE la rimuovo
+  countersImg--;
+  console.log(countersImg)
+  imgCollection[countersImg].classList.remove('hide');
+})
