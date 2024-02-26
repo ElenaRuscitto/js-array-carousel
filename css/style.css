@@ -17,10 +17,12 @@
   height: 50%;
   width: 60%;
   background-color: aqua;
+  position: relative;
 }
 
 .image-big {
   height: 100%;
+  
 }
 
 .image-big img {
@@ -28,4 +30,31 @@
   /* manca ridimensionamento img */
   height: 100%;
   width: 100%;
+}
+
+.circle {
+  background-color: rgba(255, 255, 255, .4);
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  text-align: center;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.circle.up {
+  top: 10px;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.circle.down {
+  bottom: 10px;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.circle:hover {
+  background-color: rgba(255, 255, 255, .8);
+  cursor: pointer;
 }
