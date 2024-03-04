@@ -8,35 +8,36 @@ for (let i = 0; i < immagini.length; i++) {
   console.log (i);
   // richiamo le immagini dell'array con la const img
   const img = immagini[i];
+  const imgMin = miniImmagine[i];
   console.log (immagini);
   // inserisco le immagini nell'html 
-  imageBig.innerHTML += `<img class="img hide" src="${img}">`;
+  imageBig.innerHTML += `<img class="img hide imgBig" src="${img}">`;
 }
 
 // richiamo la classe img per inserirla nella imgCollection
-const imgCollection = document.getElementsByClassName('img');
+const imgCollection = document.getElementsByClassName('imgBig');
 // contatore immagini
 let countersImg = 0;
 // rimuovo HIDE dal primo elemento
 imgCollection [0].classList.remove('hide');
 
 // creo la constante del btn up (chevron)
-const btnUp = document.querySelector('.up');
+const btnDown = document.querySelector('.down');
 
 // creo constanti per opacity e active
-let minImg = document.querySelector('.minImg');
-const opacity = document.querySelector('.opacity');
-const active = document.querySelector('.active');
+const minImg = document.getElementsByClassName('minImg');
+minImg[countersImg].classList.add('active');
 
-btnUp.addEventListener ('click', function() {
+
+btnDown.addEventListener ('click', function() {
   // al click del bntUp, la classe HIDE la metto al' immagine corrente
   imgCollection[countersImg].classList.add('hide');
+ 
+  // // al click del bntUp, la classe ACTIVE la rimuovo al' immagine corrente
+  
+  minImg[countersImg].classList.remove('active');
 
-  // // al click del bntUp, la classe OPACITY la rimuovo al' immagine corrente
-  // minImg[countersImg].classList.remove('opacity');
-
-
-  // all'incrementare del click del bntUp, la classe HIDE la rimuovo
+  // all'decremento del click del bntUp, la classe HIDE la rimuovo
   countersImg++;
   console.log(countersImg)
 
@@ -48,26 +49,22 @@ btnUp.addEventListener ('click', function() {
   }
 
 
+
    // all'incrementare del click del bntUp, la classe HIDE la rimuovo
   imgCollection[countersImg].classList.remove('hide');
 
   //  // al click del bntUp, la classe ACTIVE la metto al' immagine corrente
-  // minImg[countersImg].classList.add('active'); 
-
-
-
-
-
- 
-
+  minImg[countersImg].classList.add('active'); 
 
 })
 
 // creo la constante del btn down (chevron)
-const btnDown = document.querySelector('.down');
-btnDown.addEventListener ('click', function() {
+const btnUp = document.querySelector('.up');
+btnUp.addEventListener ('click', function() {
+
   // al click del bntUp, la classe HIDE la metto al' immagine corrente
   imgCollection[countersImg].classList.add('hide');
+  minImg[countersImg].classList.remove('active'); 
 
   // all'incrementare del click del bntUp, la classe HIDE la rimuovo
   countersImg--;
@@ -81,6 +78,6 @@ btnDown.addEventListener ('click', function() {
 
   // all'incrementare del click del bntUp, la classe HIDE la rimuovo
   imgCollection[countersImg].classList.remove('hide');
-
+  minImg[countersImg].classList.add('active'); 
 
 })
